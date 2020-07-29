@@ -222,7 +222,7 @@ function enrol_get_all_users_courses_listacursos($userid, $onlyactive = false, $
     $params['contextlevel'] = CONTEXT_COURSE;
 
     //note: we can not use DISTINCT + text fields due to Oracle and MS limitations, that is why we have the subselect there
-    $parametroadicional=',case when c.id<=2 then true else "" END as first';
+    $parametroadicional=',(case when c.id<=2 then true else "" END) as first';
     $sql = "SELECT $coursefields $ccselect $parametroadicional
               FROM {course} c
               JOIN (SELECT DISTINCT e.courseid
