@@ -643,7 +643,7 @@ function(
     };
 
     /**
-     * Listen to, and handle events for  the myacademicplan block.
+     * Escuche y maneje eventos para el bloque myacademicplan.
      *
      * @param {Object} root The myoverview block container element.
      */
