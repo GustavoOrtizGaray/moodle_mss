@@ -1,0 +1,39 @@
+.pagelayout-login .card-title h2 img {
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.pagelayout-login #region-main {
+    border: 0;
+    background-color: inherit;
+}
+
+body.pagelayout-login {                                                                                                             
+    background-image: url([[pix:theme_mss|loginbackgroundimage]]);                                                                
+    background-size: cover;                                                                                                         
+}  
+#page-footer{
+	background-color: #0000 !important;
+}
+
+
+body.pagelayout-login button#loginbtn.btn.btn-primary{
+	background: linear-gradient(180deg, #7DD3F7 -73.81%, #296BB8 36.33%, #201A58 153.57%), #004FAB;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	border-color:#0000 !important;
+}
+
+body.pagelayout-login div.card{
+	background: #0000;
+	border: 0px !important;
+}
+body.pagelayout-login div.card > div.card-block > h2.card-header{
+	background-color: #0000 !important;
+	border: 0px !important;
+}
+body.pagelayout-login div.card-body{
+	background: rgba(0, 90, 100, 0.60);
+	border-radius: 10px;
+	color: #fff;
+}
