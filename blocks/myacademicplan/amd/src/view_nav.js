@@ -21,30 +21,12 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-define(
-[
-    'jquery',
-    'core/custom_interaction_events',
-    'block_myacademicplan/repository',
-    'block_myacademicplan/view',
-    'block_myacademicplan/selectors'
-],
-function(
-    $,
-    CustomEvents,
-    Repository,
-    View,
-    Selectors
-) {
-
-    var SELECTORS = {
-        FILTERS: '[data-region="filter"]',
-        FILTER_OPTION: '[data-filter]',
-        DISPLAY_OPTION: '[data-display-option]'
-    };
+define(['jquery','core/custom_interaction_events','block_myacademicplan/repository','block_myacademicplan/view','block_myacademicplan/selectors'],
+function($,CustomEvents,Repository,View,Selectors) {
+    var SELECTORS = {FILTERS: '[data-region="filter"]',FILTER_OPTION: '[data-filter]',DISPLAY_OPTION: '[data-display-option]'};
 
     /**
-     * Update the user preference for the block.
+     * Actualice la preferencia del usuario para el bloque.
      *
      * @param {String} filter The type of filter: display/sort/grouping.
      * @param {String} value The current preferred value.

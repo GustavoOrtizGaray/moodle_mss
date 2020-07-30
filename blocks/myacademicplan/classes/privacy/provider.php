@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace block_myoverview\privacy;
+namespace block_myacademicplan\privacy;
 
 use core_privacy\local\request\user_preference_provider;
 use core_privacy\local\metadata\collection;

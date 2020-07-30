@@ -116,11 +116,11 @@ function(
     };
 
     /**
-     * Get enrolled courses from backend.
+     * Obtenga cursos inscritos de backend.
      *
-     * @param {object} filters The filters for this view.
-     * @param {int} limit The number of courses to show.
-     * @return {promise} Resolved with an array of courses.
+     * @param {object} filtros Los filtros para esta vista.
+     * @param {int} límite El número de cursos para mostrar.
+     * @return {promise} Resuelto con una variedad de cursos.
      */
     var getMyCourses = function(filters, limit) {
 
@@ -135,7 +135,7 @@ function(
     };
 
     /**
-     * Get the container element for the favourite icon.
+     * Obtenga el elemento contenedor para el icono favorito.
      *
      * @param  {Object} root The course overview container
      * @param  {Number} courseId Course id number
@@ -146,7 +146,7 @@ function(
     };
 
     /**
-     * Get the paged content container element.
+     * Obtener el elemento contenedor de contenido paginado.
      *
      * @param  {Object} root The course overview container
      * @param  {Number} index Rendered page index.
@@ -514,10 +514,10 @@ function(
     };
 
     /**
-     * Intialise the courses list and cards views on page load.
+     * Inicialice la lista de cursos y las vistas de tarjetas en la carga de la página.
      *
-     * @param {object} root The root element for the courses view.
-     * @param {object} content The content element for the courses view.
+     * @param {object} root El elemento raíz para la vista de cursos.
+     * @param {object} content El elemento de contenido para la vista de cursos.
      */
     var initializePagedContent = function(root) {
         namespace = "block_myacademicplan_" + root.attr('id') + "_" + Math.random();
@@ -535,7 +535,7 @@ function(
             };
         });
 
-        // Filter out all pagination options which are too large for the amount of courses user is enrolled in.
+        // Filtre todas las opciones de paginación que son demasiado grandes para la cantidad de cursos en los que está inscrito el usuario.
         var totalCourseCount = parseInt(root.find(Selectors.courseView.region).attr('data-totalcoursecount'), 10);
         if (totalCourseCount) {
             itemsPerPage = itemsPerPage.filter(function(pagingOption) {
@@ -556,7 +556,7 @@ function(
                     var currentPage = pageData.pageNumber;
                     var limit = (pageData.limit > 0) ? pageData.limit : 0;
 
-                    // Reset local variables if limits have changed
+                    // Restablecer variables locales si los límites han cambiado
                     if (lastLimit != limit) {
                         loadedPages = [];
                         courseOffset = 0;
@@ -564,7 +564,7 @@ function(
                     }
 
                     if (lastPage == currentPage) {
-                        // If we are on the last page and have it's data then load it from cache
+                        // Si estamos en la última página y tenemos sus datos, cárguelos desde el caché
                         actions.allItemsLoaded(lastPage);
                         promises.push(renderCourses(root, loadedPages[currentPage]));
                         return;
@@ -572,7 +572,7 @@ function(
 
                     lastLimit = limit;
 
-                    // Get 2 pages worth of data as we will need it for the hidden functionality.
+                    // Obtenga 2 páginas de datos, ya que los necesitaremos para la funcionalidad oculta.
                     if (loadedPages[currentPage + 1] == undefined) {
                         if (loadedPages[currentPage] == undefined) {
                             limit *= 2;
@@ -587,7 +587,7 @@ function(
                         var nextPageStart = 0;
                         var pageCourses = [];
 
-                        // If current page's data is loaded make sure we max it to page limit
+                        // Si se cargan los datos de la página actual, asegúrese de maximizarlos al límite de la página.
                         if (loadedPages[currentPage] != undefined) {
                             pageCourses = loadedPages[currentPage].courses;
                             var currentPageLength = pageCourses.length;
@@ -600,12 +600,13 @@ function(
                             pageCourses = (pageData.limit > 0) ? courses.slice(0, pageData.limit) : courses;
                         }
 
-                        // Finished setting up the current page
+                        // Terminado de configurar la página actual
                         loadedPages[currentPage] = {
                             courses: pageCourses
                         };
 
-                        // Set up the next page
+                        // Configura la página siguiente
+
                         var remainingCourses = nextPageStart ? courses.slice(nextPageStart, courses.length) : [];
                         if (remainingCourses.length) {
                             loadedPages[currentPage + 1] = {
@@ -613,7 +614,7 @@ function(
                             };
                         }
 
-                        // Set the last page to either the current or next page
+                        // Establezca la última página en la página actual o en la siguiente.
                         if (loadedPages[currentPage].courses.length < pageData.limit || !remainingCourses.length) {
                             lastPage = currentPage;
                             actions.allItemsLoaded(currentPage);
@@ -642,7 +643,7 @@ function(
     };
 
     /**
-     * Listen to, and handle events for  the myoverview block.
+     * Listen to, and handle events for  the myacademicplan block.
      *
      * @param {Object} root The myoverview block container element.
      */

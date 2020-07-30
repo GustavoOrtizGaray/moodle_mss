@@ -14,7 +14,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Javascript to initialise the myoverview block.
+ * Javascript para inicializar el bloque myoverview.
  *
  * @package    block_myacademicplan
  * @copyright  2018 Bas Brands <bas@moodle.com>
@@ -30,9 +30,9 @@ define(['jquery','block_myacademicplan/view','block_myacademicplan/view_nav'],
          */
         var init = function(root) {
             root = $(root);
-            // Initialise the course navigation elements.
+            // Inicializar los elementos de navegación del curso.
             ViewNav.init(root);
-            // Initialise the courses view modules.
+            // Inicializar los módulos de vista de cursos.
             View.init(root);
         };
 

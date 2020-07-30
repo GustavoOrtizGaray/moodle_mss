@@ -375,6 +375,7 @@ class main implements renderable, templatable {
         $distinctablevalue = $DB->sql_compare_text('value');
         $values = $DB->get_records_select_menu('customfield_data', $select, $params, $DB->sql_order_by_text('value'),
             "DISTINCT $distinctablevalue, $distinctablevalue AS value2");
+        
         $values = array_filter($values);
         if (!$values) {
             return [];
