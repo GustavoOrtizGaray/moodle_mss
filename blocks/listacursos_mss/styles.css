@@ -1,0 +1,50 @@
+.block_listacursos_mss div.summaryimage{
+	height: 8rem;
+	width: 15rem;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	border-radius: 5px !important;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.block_listacursos_mss div.summaryimage p{
+	position: relative;
+	font-weight: bold;
+	left: 1rem;
+	color: #fff;
+	top: 4.5rem;
+}
+.block_listacursos_mss div.container-fluid{
+	overflow-y: auto;
+	height: 22rem;
+}
+.block_listacursos_mss h5.card-title{
+	font-weight: bold;
+}
+.block_listacursos_mss div.course-summaryitem {
+    border: none !important;
+    background-color: unset !important;
+}
+.block_listacursos_mss div.align-self-stretch div.ml-auto{
+	margin-left: 0px !important;
+}
+
+.block_listacursos_mss a.list-group-item{
+	background-color: unset !important;
+}
+.block_listacursos_mss .list-group-item.active {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+.block_listacursos_mss .list-group-item.active .block_listacursos_mss div.course-summaryitem {
+    border: none !important;
+    background-color: #fff !important;
+}
+.block_myacademicplan div.leyenda-group div.leyenda-icono{
+	border-radius: 8px;
+	background: #000;
+	width: 15px;
+	height: 15px;
+}
