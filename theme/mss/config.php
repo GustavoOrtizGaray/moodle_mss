@@ -32,7 +32,7 @@ $THEME->layouts = [
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
-    // Main course page.
+    // Página principal del curso.
     'course' => array(
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
@@ -44,33 +44,33 @@ $THEME->layouts = [
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
-    // Part of course, typical for modules - default page layout if $cm specified in require_login().
+    // Parte del curso, típico de los módulos: diseño de página predeterminado si $ cm especificado en require_login ().
     'incourse' => array(
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
-    // The site home page.
+    // La página de inicio del sitio.
     'frontpage' => array(
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true),
     ),
-    // Server administration scripts.
+    // Guiones de administración del servidor.
     'admin' => array(
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
-    // My dashboard page.
+    // Mi página de tablero.
     'mydashboard' => array(
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true, 'langmenu' => true, 'nocontextheader' => true),
     ),
-    // My public page.
+    // Mi pagina publica.
     'mypublic' => array(
         'file' => 'columns2.php',
         'regions' => array('side-pre'),
@@ -82,7 +82,7 @@ $THEME->layouts = [
         'options' => array('langmenu' => true),
     ),
 
-    // Pages that appear in pop-up windows - no navigation, no blocks, no header.
+    // Páginas que aparecen en ventanas emergentes: sin navegación, sin bloques, sin encabezado.
     'popup' => array(
         'file' => 'columns1.php',
         'regions' => array(),
@@ -106,7 +106,7 @@ $THEME->layouts = [
         'file' => 'maintenance.php',
         'regions' => array(),
     ),
-    // Should display the content and basic headers only.
+    // Debe mostrar solo el contenido y los encabezados básicos.
     'print' => array(
         'file' => 'columns1.php',
         'regions' => array(),

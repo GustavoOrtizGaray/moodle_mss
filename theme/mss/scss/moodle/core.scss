@@ -2753,6 +2753,17 @@ div.barra-lateral{
     margin-right: 0px;
     margin-left: -53px;
 }
+div.barra-lateral-l{
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    top: 50px;
+    z-index: 1031;
+    left: 0px;
+    margin-left: 59px;
+    position: fixed;
+    right: 0;
+}
 div.barra-lateral div.col-12{
     height: 50px;
     background: #fff;

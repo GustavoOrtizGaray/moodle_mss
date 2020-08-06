@@ -1,3 +1,6 @@
+//agregar fuente rubicK
+
+
 // Post SCSS for the theme.
 
 body.pagelayout-login {                                                                                                             
@@ -38,4 +41,14 @@ body#page-my-index nav.navbar{
 
 }
 
+div.barra-lateral-l{
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    top: 50px;
+    left: 0px;
+    margin-left: 59px;
+    position: fixed;
+    right: 0;
+}
 
